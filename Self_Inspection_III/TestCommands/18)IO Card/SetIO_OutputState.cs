@@ -35,6 +35,7 @@ namespace Self_Inspection_III.TestCommands.IO_Card
             //byte[] Port = Encoding.UTF8.GetBytes(Vars.GetValue(para[1]));
             ushort RelaySwitch = Convert.ToUInt16(Vars.GetValue(para[2]));
 
+
             //***  Register the IO Card  ***//                      
             m_dev = DASK.Register_Card(Card_Type, CardNumber);
             IO_Dev = m_dev;

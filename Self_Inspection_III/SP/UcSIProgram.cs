@@ -31,6 +31,7 @@ namespace Self_Inspection_III.SP
         //測試使用參數
         private Dictionary<string, CviVisaCtrl> _NIDriver = new Dictionary<string, CviVisaCtrl>() { { "*", null } };
         private Dictionary<string, short> _CardNumber = new Dictionary<string, short>() { { "*", 0 } };
+        private List<short> IO_Dev = new List<short>();
 
         //Database
         private ProgramDB ProgramDB = new ProgramDB();
@@ -329,7 +330,7 @@ namespace Self_Inspection_III.SP
                                 ColorText connectResult;
                                 if (DeviceDB.GetType(dgvSPDeviceList[(int)ColSPDevice.ModelName, i].Value) == DeviceTypes.IO_Card)
                                 {
-                                    if (!_CardNumber.ContainsKey(key)) _CardNumber.Add(key, Convert.ToInt16(dgvSPDeviceList[(int)ColSPDevice.Address, i].Value));
+                                    //if (!_CardNumber.ContainsKey(key)) _CardNumber.Add(key, Convert.ToInt16(dgvSPDeviceList[(int)ColSPDevice.Address, i].Value));
                                     connectResult = ColorText.Pass;
                                 }
                                 else

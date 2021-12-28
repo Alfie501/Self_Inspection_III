@@ -330,8 +330,12 @@ namespace Self_Inspection_III.SP
                                 ColorText connectResult;
                                 if (DeviceDB.GetType(dgvSPDeviceList[(int)ColSPDevice.ModelName, i].Value) == DeviceTypes.IO_Card)
                                 {
+<<<<<<< HEAD
                                     if (!_CardNumber.ContainsKey(key)) _CardNumber.Add(key, Convert.ToInt16(dgvSPDeviceList[(int)ColSPDevice.Address, i].Value));
                                     //if (RootMode) MessageBox.Show($"_CardNumber[{key}]=" + _CardNumber[key]);
+=======
+                                    //if (!_CardNumber.ContainsKey(key)) _CardNumber.Add(key, Convert.ToInt16(dgvSPDeviceList[(int)ColSPDevice.Address, i].Value));
+>>>>>>> 817fa57 (20211228 1649)
                                     connectResult = ColorText.Pass;
                                 }
                                 else

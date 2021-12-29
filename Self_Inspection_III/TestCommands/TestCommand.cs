@@ -117,8 +117,8 @@ namespace Self_Inspection_III.TestCommands
         protected virtual bool Function(string ParaString, ushort CardNumber, ushort CardType, out short IO_Dev, ref ItemVars Vars) { IO_Dev = 0; return false; }
         public static bool DoIOFunction(SI_TestFunction Func, ushort CardNumber, ushort CardType, out short IO_Dev, ref ItemVars Vars)
         {
-            short io_dev = 0;       //
-            try 
+            short io_dev = 0;
+            try
             {
                 TestCommand testCommand = TC(Func.TestCommand);
 

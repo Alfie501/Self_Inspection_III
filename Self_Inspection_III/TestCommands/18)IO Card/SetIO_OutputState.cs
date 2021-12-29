@@ -40,7 +40,7 @@ namespace Self_Inspection_III.TestCommands.IO_Card
             m_dev = DASK.Register_Card(CardType, CardNumber);
             IO_Dev = m_dev;
             if (m_dev < 0)
-            {
+            {            
                 Console.WriteLine("Register_Card error!");
             }
 
